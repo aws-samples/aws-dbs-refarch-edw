@@ -12,7 +12,7 @@ Because AWS Services are designed to work together, the service is largely consi
 
 ### Simple, Single Cluster with Public Routing
 
-<table><tr><td><a href="public-routing/README.md"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/public-routing/thumbnail.png"/></a></td><td>
+<table><tr><td><a href="public-routing/README.md"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/public-routing/thumbnail.png"/></a></td><td>
 This the most basic architecture that we recommend to e used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
 </td></tr></table>
 
