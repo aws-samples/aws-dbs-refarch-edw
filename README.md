@@ -10,9 +10,9 @@ This project provides you with an overview of the most common deployment models 
 
 Because AWS Services are designed to work together, the service is largely consistent in how it's deployed, and you don't have to make many architectural decisions. However, you do have to decide how to deploy them within your VPC. The following architectures provide common patterns for how customers deploy 
 
-### Simple, Single Cluster with Public Routing
+### [Simple, Single Cluster with Public Routing](public-routing)
 
-<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/public-routing"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/public-routing/thumbnail.png"/></a></td><td>
+<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/public-routing"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/public-routing/thumbnail.png"/></a></td><td>
 This the most basic architecture that we recommend to e used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
 </td></tr></table>
 
