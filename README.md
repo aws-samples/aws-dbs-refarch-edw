@@ -13,26 +13,64 @@ Because AWS Services are designed to work together, the service is largely consi
 ### [Simple, Single Cluster with Public Routing](public-routing)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/public-routing"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/public-routing/thumbnail.png"/></a></td><td>
-This the most basic architecture that we recommend to e used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
+
+This the most basic architecture that we recommend to be used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
+
 </td></tr></table>
 
-### Single Cluster with Private (DirectConnect) Routing
+### [Single Cluster with Private (DirectConnect) Routing](private-routing)
+
+<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/private-routing"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/private-routing/thumbnail.png"/></a></td><td>
+
+This is perhaps the most common deployment architecture for Redshift clusters - deployed within private subnets in VPC that are only accessible over DirectConnect.
+
+</td></tr></table>
 
 ## Architectures for Scaling
 
-### Multiple Business Line Clusters
+### [Multiple Business Line Clusters](business-line-clusters)
 
-### Redshift Spectrum based Multi-Cluster
+<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/business-line-clusters"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/business-line-clusters/thumbnail.png"/></a></td><td>
 
-### Low Latency Hybrid Architecture
+This the most basic architecture that we recommend to be used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
+
+</td></tr></table>
+
+### [Redshift Spectrum based Multi-Cluster](spectrum-multicluster)
+
+<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/spectrum-multicluster"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/spectrum-multicluster/thumbnail.png"/></a></td><td>
+
+This the most basic architecture that we recommend to be used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
+
+</td></tr></table>
+
+### [Low Latency Hybrid Architecture](high-performance-hybrid)
+
+<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/high-performance-hybrid"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/high-performance-hybrid/thumbnail.png"/></a></td><td>
+
+This the most basic architecture that we recommend to be used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
+
+</td></tr></table>
 
 ## Integrating with Other AWS Services
 
-### Connecting with AWS Lambda
+### [Connecting with AWS Lambda](lambda-connections)
+
+<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/lambda-connections"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/lambda-connections/thumbnail.png"/></a></td><td>
+
+This the most basic architecture that we recommend to be used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
+
+</td></tr></table>
 
 ### Loading data with Kinesis Firehose
 
-### Access from Amazon Quicksight
+### [Access from Amazon Quicksight](quicksight-connections)
+
+<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/quicksight-connections"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/quicksight-connections/thumbnail.png"/></a></td><td>
+
+This the most basic architecture that we recommend to be used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
+
+</td></tr></table>
 
 ## License Summary
 
