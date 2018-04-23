@@ -32,7 +32,7 @@ This is perhaps the most common deployment architecture for Redshift clusters - 
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/business-line-clusters"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/business-line-clusters/thumbnail.png"/></a></td><td>
 
-This the most basic architecture that we recommend to be used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
+It's extremely common that you want to expose Data Warehouse data to different types of customers, and often the customers have unique data sets that also include common reference data. This architecture shows how you can use a centralised ETL cluster and then export/import or Redshift Spectrum to create targeted data warehouses for a variety of use cases.
 
 </td></tr></table>
 
@@ -40,7 +40,7 @@ This the most basic architecture that we recommend to be used with Amazon Redshi
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/spectrum-multicluster"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/spectrum-multicluster/thumbnail.png"/></a></td><td>
 
-This the most basic architecture that we recommend to be used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
+Similar to the idea of having separate clusters for different business units within your business, this architecture shows how you can share data among an unlimited number of different clusters via Redshift Spectrum, while also enabling services like Amazon Athena and Glue.
 
 </td></tr></table>
 
@@ -48,7 +48,7 @@ This the most basic architecture that we recommend to be used with Amazon Redshi
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/high-performance-hybrid"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/high-performance-hybrid/thumbnail.png"/></a></td><td>
 
-This the most basic architecture that we recommend to be used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
+In some cases, you'll want to expose data from Redshift to applications and websites that require many thousands of concurrent users with millisecond latency. In these cases, it can be useful to use [RDS Postgres Aurora](https://aws.amazon.com/rds/aurora/details/postgresql-details) as a 'cache' of business metrics in front of Redshift.
 
 </td></tr></table>
 
@@ -58,7 +58,7 @@ This the most basic architecture that we recommend to be used with Amazon Redshi
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/lambda-connections"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/lambda-connections/thumbnail.png"/></a></td><td>
 
-This the most basic architecture that we recommend to be used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
+[AWS Lambda](https://aws.amazon.com/lambda) lets you run code without provisioning or managing servers. You pay only for the compute time you consume - there is no charge when your code is not running.
 
 </td></tr></table>
 
