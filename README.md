@@ -1,8 +1,8 @@
 # AWS Reference Architectures - Amazon Redshift
 
-Amazon Redshift is a fast, fully managed data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and your existing Business Intelligence (BI) tools. It allows you to run complex analytic queries against petabytes of structured data, using sophisticated query optimization, columnar storage on high-performance local disks, and massively parallel query execution.
+[Amazon Redshift](https://aws.amazon.com/redshift) is a fast, fully managed parallel data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and your existing business intelligence (BI) tools. It allows you to run complex analytic queries against petabytes of structured data, using sophisticated query optimization, columnar storage on high-performance local disks, and massively parallel query execution.
 
-This project provides you with an overview of the most common deployment models and reference architectures that we see built by customers with the Redshift service. Redshift is extremely flexible, and able to be run both within VPC and in EC2 Classic networking environments. These reference architectures only assume that you run the service within VPC, which offers significant security, simplicity, and performance benefits over non-VPC deployments. We start with simple deployment models, and then move to other types of use cases and data integrations.
+This project provides you with an overview of the most common deployment models and reference architectures that we see built by customers with the Redshift service. Redshift is extremely flexible, and able to be run both within VPC and in EC2 Classic networking environments. These reference architectures only assume that you run the service within VPC, which offers significant security, simplicity, and performance benefits over non-VPC deployments. We start with data architectures that work well for analytics, then cover simple deployment models, and then move to other types of use cases and data integrations.
 
 ## Data Architectures
 
@@ -40,7 +40,7 @@ It's extremely common that you want to expose Data Warehouse data to different t
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/spectrum-multicluster"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/spectrum-multicluster/thumbnail.png"/></a></td><td>
 
-Similar to the idea of having separate clusters for different business units within your business, this architecture shows how you can share data among an unlimited number of different clusters via Redshift Spectrum, while also enabling services like Amazon Athena and Glue.
+Similar to the idea of having separate clusters for different business units within your business, this architecture shows how you can share data among an unlimited number of different clusters via [Redshift Spectrum](https://aws.amazon.com/redshift/spectrum), while also enabling services like [Amazon Athena](https://aws.amazon.com/athena) and [AWS Glue](https://aws.amazon.com/glue).
 
 </td></tr></table>
 
@@ -58,7 +58,7 @@ In some cases, you'll want to expose data from Redshift to applications and webs
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/lambda-connections"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/lambda-connections/thumbnail.png"/></a></td><td>
 
-[AWS Lambda](https://aws.amazon.com/lambda) lets you run code without provisioning or managing servers. You pay only for the compute time you consume - there is no charge when your code is not running.
+[AWS Lambda](https://aws.amazon.com/lambda) lets you run code without provisioning or managing servers. You pay only for the compute time you consume - there is no charge when your code is not running. AWS Lambda can be used as a powerful workflow or compute engine with data, and connecting to Redshift is simple and easy.
 
 </td></tr></table>
 
@@ -68,7 +68,7 @@ In some cases, you'll want to expose data from Redshift to applications and webs
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/quicksight-connections"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/quicksight-connections/thumbnail.png"/></a></td><td>
 
-This the most basic architecture that we recommend to be used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
+[Amazon Quicksight](https://aws.amazon.com/quicksight) is a fast, cloud-powered business analytics service that makes it easy to build visualizations, perform ad-hoc analysis, and quickly get business insights from your data. Amazon Redshift is one of the most common engines for analysis, and connecting to Quicksight requires only a couple of steps.
 
 </td></tr></table>
 
