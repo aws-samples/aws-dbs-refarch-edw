@@ -6,6 +6,22 @@ This project provides you with an overview of the most common deployment models 
 
 ## Data Architectures
 
+### [Star Schema](star-schema)
+
+<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/star-schema"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/star-schema/thumbnail.png"/></a></td><td>
+
+Star schemas, or more formally Kimball Models, offer a powerful ability to perform multi-dimensional analysis of vast structured datasets. Star schemas are simple to model using industry standard data modelling, and which are extremely performant on Redshift.
+
+</td></tr></table>
+
+### [ODS & Aggregation Models](inmon-model)
+
+<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/inmon-model"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/inmon-model/thumbnail.png"/></a></td><td>
+
+Many workloads on Redshift copy all Operational Data Stores (ODS) onto a single platform where reporting can be easily done across system lines, and where simple aggregations of business data can be calculated. This architecture shows you how to build an 'all-your-data-in-one-place' model.
+
+</td></tr></table>
+
 ## Deployment Architectures
 
 Because AWS Services are designed to work together, the service is largely consistent in how it's deployed, and you don't have to make many architectural decisions. However, you do have to decide how to deploy them within your VPC. The following architectures provide common patterns for how customers deploy 
