@@ -1,1 +1,1 @@
-![Data Model](data-model.png)
+![Data Model](data-model.jpg)
