@@ -1,3 +1,15 @@
 # Redshift cluster architecture to support connections from anywhere
 
+## Overview
+
 ![Public Connections](public-routing.png)
+
+## Walkthrough of the Architecture
+
+1. In this architecture, we deploy Redshift to [Amazon Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc), as will be the case for all our other architectures. VPC supports public subnets, which are routable from an Internet Gateway, and private subnets which are not. We recommend that Redshift be run in private subnets, which gives you the maximum security and control over how connections are made to the Cluster.
+2. In order to create the cluster, we must configure a [Cluster Subnet Group](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-cluster-subnet-groups.html), which identifies the list of subnets where we want to run the cluster. It is a best practice _to create cluster Subnet Groups that span [Availability Zones (AZ)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)_. In the extremely unlikely case that an AZ goes offline, having your Cluster Subnet Group span AZ's will make it very easy to replace the cluster in another AZ with the same security architecture and routing rules.
+3. Your VPC will have both Private and Public Subnets, as in this architecture you will connect to resources in the VPC using Public IP addresses. In this architecture, you'll [create a VPC Routing Table](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario2.html) that will allow connections to resources in Public Subnets from the Internet Gateway, but only allow connections to the Private Subnets from Public Subnets.
+4. Connections to your environment can be made by your end users using [Amazon Workspaces](https://aws.amazon.com/workspaces), a powerful Virtual Desktop Interface (VDI) in the Cloud. This gives you the ability to present all of your third party reporting tools via a managed applicaiton environment. You may also offer [Bastion Hosts](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/architecture.html) or Remote Desktop based Instances using EC2 in order to administer your environment.
+5. Web connections made from your end users will terminate on an [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html) which is presented in a Public Subnet. This allows your third-party reporting servers (such as Tableau or Looker) to be deployed into Private Subnets, and increases the control you have over where connections originate and how they are handled.
+6. Your Redshift Cluster, Reporting Server, Workspaces, Bastion/RDP Hosts and ALB can all share a [VPC Security Group](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html), which is a software filewall that allows connections only from members of the group, and on only the ports that you configure.
+7. When Redshift connects to Amazon S3, it will route out of your VPC via an Internet Gateway, where it will then hit the S3 endpoint for the specified region.

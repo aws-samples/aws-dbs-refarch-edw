@@ -38,7 +38,7 @@ This the most basic architecture that we recommend to be used with Amazon Redshi
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/private-routing"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/private-routing/thumbnail.png"/></a></td><td>
 
-This is perhaps the most common deployment architecture for Redshift clusters - deployed within private subnets in VPC that are only accessible over DirectConnect.
+This is perhaps the most common deployment architecture for Redshift clusters - deployed within private subnets in VPC that are only accessible over private, leased lines, through [DirectConnect](https://aws.amazon.com/directconnect).
 
 </td></tr></table>
 
