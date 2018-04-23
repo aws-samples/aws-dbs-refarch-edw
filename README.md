@@ -78,16 +78,6 @@ In some cases, you'll want to expose data from Redshift to applications and webs
 
 </td></tr></table>
 
-### Loading data with Kinesis Firehose
-
-### [Access from Amazon Quicksight](quicksight-connections)
-
-<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/quicksight-connections"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/quicksight-connections/thumbnail.png"/></a></td><td>
-
-[Amazon Quicksight](https://aws.amazon.com/quicksight) is a fast, cloud-powered business analytics service that makes it easy to build visualizations, perform ad-hoc analysis, and quickly get business insights from your data. Amazon Redshift is one of the most common engines for analysis, and connecting to Quicksight requires only a couple of steps.
-
-</td></tr></table>
-
 ## License Summary
 
 This sample code is made available under a modified MIT license. See the LICENSE file.
