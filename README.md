@@ -78,7 +78,7 @@ Amazon Redshift can integrate with a variety of other AWS services for the purpo
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/firehose-data-loading"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/firehose-data-loading/thumbnail.png"/></a></td><td>
 
-Data to be ingested into a data warehouse is often file based, but can also be based on streaming sources such as application logs. Kinesis Firehose provides powerful integration to load this data automatically into your data lake and data warehouse
+Data to be ingested into a data warehouse is often file based, but can also be based on streaming sources such as application logs. [Kinesis Firehose](https://aws.amazon.com/blogs/aws/amazon-kinesis-firehose-simple-highly-scalable-data-ingestion) provides powerful integration to load this data automatically into your data lake and data warehouse
 
 </td></tr></table>
 
