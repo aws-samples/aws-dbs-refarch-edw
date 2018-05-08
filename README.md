@@ -10,13 +10,13 @@ This project provides you with an overview of the most common deployment models 
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/star-schema"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/star-schema/thumbnail.png"/></a></td><td>
 
-Star schemas, or more formally Kimball Models, offer a powerful ability to perform multi-dimensional analysis of vast structured datasets. Star schemas are simple to model using industry standard data modelling, and which are extremely performant on Redshift.
+Star schemas offer a powerful ability to perform multi-dimensional analysis of vast structured datasets. Star schemas are simple to use with a variety of industry standard data tools, and are extremely performant on Redshift.
 
 </td></tr></table>
 
-### [ODS & Aggregation Models](inmon-model)
+### [ODS & Aggregation Models](ods-aggregation)
 
-<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/inmon-model"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/inmon-model/thumbnail.png"/></a></td><td>
+<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/ods-aggregation"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/ods-aggregation/thumbnail.png"/></a></td><td>
 
 Many workloads on Redshift copy all Operational Data Stores (ODS) onto a single platform where reporting can be easily done across system lines, and where simple aggregations of business data can be calculated. This architecture shows you how to build an 'all-your-data-in-one-place' model.
 
@@ -24,7 +24,7 @@ Many workloads on Redshift copy all Operational Data Stores (ODS) onto a single 
 
 ## Deployment Architectures
 
-Because AWS Services are designed to work together, the service is largely consistent in how it's deployed, and you don't have to make many architectural decisions. However, you do have to decide how to deploy them within your VPC. The following architectures provide common patterns for how customers deploy 
+Because AWS Services are designed to work together, Redshift is consistent in how it's deployed, and you don't have to make many architectural decisions. However, you do have to decide where to deploy it within your VPC. The following architectures provide common patterns for how customers deploy Redshift within their networking environment to achieve their primary aims around security, connectivity, and performance.
 
 ### [Simple, Single Cluster with Public Routing](public-routing)
 
@@ -43,6 +43,8 @@ This is perhaps the most common deployment architecture for Redshift clusters - 
 </td></tr></table>
 
 ## Architectures for Scaling
+
+Redshift supports horizontal scaling by adding and removing nodes from a cluster. It providers the [Workload Management System](https://docs.aws.amazon.com/redshift/latest/dg/c_workload_mngmt_classification.html) to provide workload prioritisation and control. In some cases, you may wish to provide multiple clusters across your user base to provide for specific SLA's or isolation characteristics.
 
 ### [Multiple Business Line Clusters](business-line-clusters)
 
@@ -70,6 +72,16 @@ In some cases, you'll want to expose data from Redshift to applications and webs
 
 ## Integrating with Other AWS Services
 
+Amazon Redshift can integrate with a variety of other AWS services for the purposes of data ingestion, reporting & visualisation, or workflow and process management. The following architectures can enable this integration.
+
+### [Data Loading with Kinesis Firehose - Coming Soon](firehose-data-loading)
+
+<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/firehose-data-loading"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/firehose-data-loading/thumbnail.png"/></a></td><td>
+
+Data to be ingested into a data warehouse is often file based, but can also be based on streaming sources such as application logs. Kinesis Firehose provides powerful integration to load this data automatically into your data lake and data warehouse
+
+</td></tr></table>
+
 ### [Connecting with AWS Lambda](lambda-connections)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/lambda-connections"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/lambda-connections/thumbnail.png"/></a></td><td>
@@ -77,6 +89,15 @@ In some cases, you'll want to expose data from Redshift to applications and webs
 [AWS Lambda](https://aws.amazon.com/lambda) lets you run code without provisioning or managing servers. You pay only for the compute time you consume - there is no charge when your code is not running. AWS Lambda can be used as a powerful workflow or compute engine with data, and connecting to Redshift is simple and easy.
 
 </td></tr></table>
+
+### [Data Visualisation with Quicksight](quicksight-viz)
+
+<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/quicksight-viz"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/quicksight-viz/thumbnail.png"/></a></td><td>
+
+[Amazon Quicksight](https://aws.amazon.com/quicksight) is a powerful data visualisation and business intelligence service that is serverless, and fully managed in the cloud. It provides the ability to create your first visualisation in as little as 60 seconds, and provides simple integration with a variety of AWS analytics services, including Redshift.
+
+</td></tr></table>
+
 
 ## License Summary
 
