@@ -6,7 +6,7 @@ This project provides you with an overview of the most common deployment models 
 
 ## Data Architectures
 
-### [Star Schema](star-schema)
+### [Star Schema](src/star-schema)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/star-schema"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/star-schema/thumbnail.png"/></a></td><td>
 
@@ -14,7 +14,7 @@ Star schemas offer a powerful ability to perform multi-dimensional analysis of v
 
 </td></tr></table>
 
-### [ODS & Aggregation Models](ods-aggregation)
+### [ODS & Aggregation Models](src/ods-aggregation)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/ods-aggregation"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/ods-aggregation/thumbnail.png"/></a></td><td>
 
@@ -26,7 +26,7 @@ Many workloads on Redshift copy all Operational Data Stores (ODS) onto a single 
 
 Because AWS Services are designed to work together, Redshift is consistent in how it's deployed, and you don't have to make many architectural decisions. However, you do have to decide where to deploy it within your VPC. The following architectures provide common patterns for how customers deploy Redshift within their networking environment to achieve their primary aims around security, connectivity, and performance.
 
-### [Simple, Single Cluster with Public Routing](public-routing)
+### [Simple, Single Cluster with Public Routing](src/public-routing)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/public-routing"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/public-routing/thumbnail.png"/></a></td><td>
 
@@ -34,7 +34,7 @@ This the most basic architecture that we recommend to be used with Amazon Redshi
 
 </td></tr></table>
 
-### [Single Cluster with Private (DirectConnect) Routing](private-routing)
+### [Single Cluster with Private (DirectConnect) Routing](src/private-routing)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/private-routing"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/private-routing/thumbnail.png"/></a></td><td>
 
@@ -46,7 +46,7 @@ This is perhaps the most common deployment architecture for Redshift clusters - 
 
 Redshift supports horizontal scaling by adding and removing nodes from a cluster. It providers the [Workload Management System](https://docs.aws.amazon.com/redshift/latest/dg/c_workload_mngmt_classification.html) to provide workload prioritisation and control. In some cases, you may wish to provide multiple clusters across your user base to provide for specific SLA's or isolation characteristics.
 
-### [Multiple Business Line Clusters](business-line-clusters)
+### [Multiple Business Line Clusters](src/business-line-clusters)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/business-line-clusters"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/business-line-clusters/thumbnail.png"/></a></td><td>
 
@@ -54,7 +54,7 @@ It's extremely common that you want to expose Data Warehouse data to different t
 
 </td></tr></table>
 
-### [Redshift Spectrum based Multi-Cluster](spectrum-multicluster)
+### [Redshift Spectrum based Multi-Cluster](src/spectrum-multicluster)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/spectrum-multicluster"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/spectrum-multicluster/thumbnail.png"/></a></td><td>
 
@@ -62,7 +62,7 @@ Similar to the idea of having separate clusters for different business units wit
 
 </td></tr></table>
 
-### [Low Latency Hybrid Architecture](high-performance-hybrid)
+### [Low Latency Hybrid Architecture](src/high-performance-hybrid)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/high-performance-hybrid"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/high-performance-hybrid/thumbnail.png"/></a></td><td>
 
@@ -74,7 +74,7 @@ In some cases, you'll want to expose data from Redshift to applications and webs
 
 Amazon Redshift can integrate with a variety of other AWS services for the purposes of data ingestion, reporting & visualisation, or workflow and process management. The following architectures can enable this integration.
 
-### [Data Loading with Kinesis Firehose - Coming Soon](firehose-data-loading)
+### [Data Loading with Kinesis Firehose - Coming Soon](src/firehose-data-loading)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/firehose-data-loading"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/firehose-data-loading/thumbnail.png"/></a></td><td>
 
@@ -82,7 +82,7 @@ Data to be ingested into a data warehouse is often file based, but can also be b
 
 </td></tr></table>
 
-### [Connecting with AWS Lambda](lambda-connections)
+### [Connecting with AWS Lambda](src/lambda-connections)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/lambda-connections"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/lambda-connections/thumbnail.png"/></a></td><td>
 
@@ -90,7 +90,7 @@ Data to be ingested into a data warehouse is often file based, but can also be b
 
 </td></tr></table>
 
-### [Data Visualisation with Quicksight](quicksight-viz)
+### [Data Visualisation with Quicksight](src/quicksight-viz)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/quicksight-viz"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/quicksight-viz/thumbnail.png"/></a></td><td>
 
