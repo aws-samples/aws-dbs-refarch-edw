@@ -4,7 +4,7 @@
 
 Many data warehouses will bring operational system data into a single environment using the same structure as the source, and then collapse this data into a format which is more suitable for querying in aggregated form.
 
-<img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/ods-aggregation/ods-aggregation.png" width="671" height="763">
+<img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/ods-aggregation/ods-aggregation.png" height="671" width="763">
 
 ## Walkthrough of the Architecture
 
