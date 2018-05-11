@@ -4,7 +4,7 @@
 
 Many data warehouses will bring operational system data into a single environment using the same structure as the source, and then collapse this data into a format which is more suitable for querying in aggregated form.
 
-![ODS & Aggregation](ods-aggregation.png)
+![ODS & Aggregation](ods-aggregation.png | width=750)
 
 ## Walkthrough of the Architecture
 
