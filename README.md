@@ -2,7 +2,7 @@
 
 [Amazon Redshift](https://aws.amazon.com/redshift) is a fast, fully managed parallel data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and your existing business intelligence (BI) tools. It allows you to run complex analytic queries against petabytes of structured data, using sophisticated query optimization, columnar storage on high-performance local disks, and massively parallel query execution.
 
-This project provides you with an overview of the most common deployment models and reference architectures that we see built by customers with the Redshift service. Redshift is extremely flexible, and able to be run both within VPC and in EC2 Classic networking environments. These reference architectures only assume that you run the service within VPC, which offers significant security, simplicity, and performance benefits over non-VPC deployments. We start with data architectures that work well for analytics, then cover simple deployment models, and then move to other types of use cases and data integrations.
+This repository provides you with an overview of the most common data, deployment, and reference architectures that we see built by customers with the Redshift service. Redshift is extremely flexible, and able to be run both within VPC and in EC2 Classic networking environments. These reference architectures only assume that you run the service within VPC, which offers significant security, simplicity, and performance benefits over non-VPC deployments. We start with data architectures that work well for analytics, then cover simple deployment models, and then move to other types of use cases and data integrations.
 
 ## Data Architectures
 
@@ -10,7 +10,7 @@ This project provides you with an overview of the most common deployment models 
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/star-schema"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/star-schema/thumbnail.png"/></a></td><td>
 
-Star schemas offer a powerful ability to perform multi-dimensional analysis of vast structured datasets. Star schemas are simple to use with a variety of industry standard data tools, and are extremely performant on Redshift.
+Star schema offers a powerful ability to perform multi-dimensional analysis of vast structured datasets. Star schemas are simple to use with a variety of industry standard data tools, and are extremely performant on Redshift.
 
 </td></tr></table>
 
@@ -18,19 +18,19 @@ Star schemas offer a powerful ability to perform multi-dimensional analysis of v
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/ods-aggregation"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/ods-aggregation/thumbnail.png"/></a></td><td>
 
-Many workloads on Redshift copy all Operational Data Stores (ODS) onto a single platform where reporting can be easily done across system lines, and where simple aggregations of business data can be calculated. This architecture shows you how to build an 'all-your-data-in-one-place' model.
+Many data warehouses copy all Operational Data Stores (ODS) onto a single platform where reporting can be easily done across system lines, and where simple aggregations of business data can be calculated. This architecture shows you how to build an 'all-your-data-in-one-place' model.
 
 </td></tr></table>
 
 ## Deployment Architectures
 
-Because AWS Services are designed to work together, Redshift is consistent in how it's deployed, and you don't have to make many architectural decisions. However, you do have to decide where to deploy it within your VPC. The following architectures provide common patterns for how customers deploy Redshift within their networking environment to achieve their primary aims around security, connectivity, and performance.
+Because AWS Services are designed to work together, Redshift is consistent in how it's deployed, and you don't have to make many architectural decisions to ge the service online. However, you do have to decide where to deploy it within your VPC. The following architectures provide common patterns for how customers deploy Redshift within their networking environment to achieve their goals for security, connectivity, and performance.
 
 ### [Simple, Single Cluster with Public Routing](src/public-routing)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/public-routing"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/public-routing/thumbnail.png"/></a></td><td>
 
-This the most basic architecture that we recommend to be used with Amazon Redshift. It uses simple public routing, and enables high availability. Click the thumbnail for more information.
+This the most basic architecture that we recommend to be used with Amazon Redshift. It uses direct public routing, or alternatively can offer routing via SSH proxies. Click the thumbnail for more information.
 
 </td></tr></table>
 
