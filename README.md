@@ -74,7 +74,7 @@ In some cases, you'll want to expose data from Redshift to applications and webs
 
 Amazon Redshift can integrate with a variety of other AWS services for the purposes of data ingestion, reporting & visualisation, or workflow and process management. The following architectures can enable this integration.
 
-### [Data Loading with Kinesis Firehose - Coming Soon](src/firehose-data-loading)
+### [Data Loading with Kinesis Firehose](src/firehose-data-loading)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/firehose-data-loading"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/firehose-data-loading/thumbnail.png"/></a></td><td>
 
