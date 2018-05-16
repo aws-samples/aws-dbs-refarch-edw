@@ -1,8 +1,8 @@
-# Business Line Clusters
+# Business Line Data Warehouses
 
 ## Overview
 
-This architecture provides you with the ability to run multiple Redshift clusters that are each sized to meet the requirements of separate groups of end users. You may create these clusters based on Business Units, or based upon how your end users use the data. For example, some users just need prebuilt reports, where others require deep ad-hoc analysis against all your data.
+This architecture provides you with the ability to run multiple Redshift Data Warehouses that are each sized to meet the requirements of separate groups of end users. You may create these clusters based on Business Units, or based upon how your end users use the data. For example, some users just need prebuilt reports, where others require deep ad-hoc analysis against all your data.
 
 ![Business Line Clusters](business-line-clusters.png)
 

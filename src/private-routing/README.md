@@ -1,4 +1,4 @@
-# Redshift cluster architecture to support private connections
+# Data Warehouse deployment architecture to support private connections
 
 ## Overview
 This is perhaps the most common deployment architecture for Redshift clusters - deployed within private subnets in VPC that are only accessible over private, leased lines, through [DirectConnect](https://aws.amazon.com/directconnect). Use this architecture when you want:

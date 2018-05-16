@@ -1,4 +1,4 @@
-# High Performance Hybrid
+# High Performance Hybrid Data Warehouse
 
 ## Overview
 

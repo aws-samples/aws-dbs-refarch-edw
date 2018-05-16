@@ -1,4 +1,4 @@
-# Multi-Cluster Architecture leveraging Redshift Spectrum
+# Multi-Warehouse Architecture leveraging Redshift Spectrum
 
 ## Overview
 

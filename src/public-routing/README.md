@@ -1,4 +1,4 @@
-# Redshift cluster architecture to support connections from anywhere
+# Data Warehouse deployment architecture to support connections from anywhere
 
 ## Public Routing - Overview
 

@@ -1,6 +1,20 @@
-# AWS Reference Architectures - Amazon Redshift
+# AWS Reference Architectures - Enterprise Data Warehousing
 
-[Amazon Redshift](https://aws.amazon.com/redshift) is a fast, fully managed parallel data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and your existing business intelligence (BI) tools. It allows you to run complex analytic queries against petabytes of structured data, using sophisticated query optimization, columnar storage on high-performance local disks, and massively parallel query execution.
+Enterprise Data Warehousing is a key workload for all types of customers - from small startups through to the largest enterprises. It differs from a Data Lake solution in several key ways, but is most commonly run alongside a Data Lake to support fast end user queries on well understood data. Key characteristics of an Enterprise Data Warehousing workload include:
+
+* Data sources are typically highly structured, and most commonly from application databases
+* Query response times are expected to be less than 1 second for most queries
+* Data access is primarily performed via SQL
+* Data volumes are expected to be tens or hundreds of Terabytes, with the largest systems at Petabyte scale
+* Data in the warehouse should be as up-to-date as possible, but in many cases may only be refreshed on an hourly or nightly basis
+* Data transformation may be performed within the warehouse, both from source to target models, as well as for data cleansing, governance, and standardisation
+
+There are also typically some constraints to an Enterprise Data Warehouse, which may or may not apply to your use case:
+
+* Data must typically be modelled before loading into the data warehouse, though flexibility of the data model can be a key differentiator between services
+* Data warehouses are typically not exposed to application front ends, websites, or mobile apps for consumption by an unlimited number of users
+
+[Amazon Redshift](https://aws.amazon.com/redshift) is a fast, fully managed parallel data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and your existing business intelligence (BI) tools. It allows you to run complex analytic queries against petabytes of structured data, using sophisticated query optimization, columnar storage on high-performance local disks, and massively parallel query execution. When combined with other AWS purpose-built services for analytics, you can implement a scalable and powerful Enterprise Data Warehouse that meets the demands of a vareity of different types of users.
 
 This repository provides you with an overview of the most common data, deployment, and reference architectures that we see built by customers with the Redshift service. Redshift is extremely flexible, and able to be run both within VPC and in EC2 Classic networking environments. These reference architectures only assume that you run the service within VPC, which offers significant security, simplicity, and performance benefits over non-VPC deployments. We start with data architectures that work well for analytics, then cover simple deployment models, and then move to other types of use cases and data integrations.
 
@@ -18,15 +32,15 @@ Star schema offers a powerful ability to perform multi-dimensional analysis of v
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/ods-aggregation"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/ods-aggregation/thumbnail.png"/></a></td><td>
 
-Many data warehouses copy all Operational Data Stores (ODS) onto a single platform where reporting can be easily done across system lines, and where simple aggregations of business data can be calculated. This architecture shows you how to build an 'all-your-data-in-one-place' model.
+Many Enterprise Data Warehouses copy all source application databases onto a single platform where reporting can be easily done across system lines, and where simple aggregations of business data can be calculated. This architecture shows you how to build an 'all-your-data-in-one-place' model.
 
 </td></tr></table>
 
 ## Deployment Architectures
 
-Because AWS Services are designed to work together, Redshift is consistent in how it's deployed, and you don't have to make many architectural decisions to ge the service online. However, you do have to decide where to deploy it within your VPC. The following architectures provide common patterns for how customers deploy Redshift within their networking environment to achieve their goals for security, connectivity, and performance.
+Because AWS Services are designed to work together, most AWS services are consistent in how they are deployed, and you don't have to make many architectural decisions to ge the service online. However, you do have to decide how to structure your [Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc) network, and where services reside within it. The following architectures provide common patterns for how customers deploy an Enterprise Data Warehouse within their networking environment to achieve their goals for security, connectivity, and performance.
 
-### [Simple, Single Cluster with Public Routing](src/public-routing)
+### [Simple, Single DW with Public Routing](src/public-routing)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/public-routing"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/public-routing/thumbnail.png"/></a></td><td>
 
@@ -34,7 +48,7 @@ This the most basic architecture that we recommend to be used with Amazon Redshi
 
 </td></tr></table>
 
-### [Single Cluster with Private (DirectConnect) Routing](src/private-routing)
+### [Single DW with Private (DirectConnect) Routing](src/private-routing)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/private-routing"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/private-routing/thumbnail.png"/></a></td><td>
 
@@ -46,15 +60,15 @@ This is perhaps the most common deployment architecture for Redshift clusters - 
 
 Redshift supports horizontal scaling by adding and removing nodes from a cluster. It providers the [Workload Management System](https://docs.aws.amazon.com/redshift/latest/dg/c_workload_mngmt_classification.html) to provide workload prioritisation and control. In some cases, you may wish to provide multiple clusters across your user base to provide for specific SLA's or isolation characteristics.
 
-### [Multiple Business Line Clusters](src/business-line-clusters)
+### [Multiple Business Line Warehouses](src/business-line-clusters)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/business-line-clusters"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/business-line-clusters/thumbnail.png"/></a></td><td>
 
-It's extremely common that you want to expose Data Warehouse data to different types of customers, and often the customers have unique data sets that also include common reference data. This architecture shows how you can use a centralised ETL cluster and then export/import or Redshift Spectrum to create targeted data warehouses for a variety of use cases.
+It's extremely common that you want to expose Data Warehouse data to different types of customers, and often the customers have unique data sets that also include common reference data. This architecture shows how you can use a centralised ETL cluster and then use export/import or Redshift Spectrum to create targeted Data Warehouses or Marts for a variety of use cases.
 
 </td></tr></table>
 
-### [Redshift Spectrum based Multi-Cluster](src/spectrum-multicluster)
+### [Redshift Spectrum based Multi-Warehouse](src/spectrum-multicluster)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/spectrum-multicluster"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/spectrum-multicluster/thumbnail.png"/></a></td><td>
 
@@ -62,15 +76,15 @@ Similar to the idea of having separate clusters for different business units wit
 
 </td></tr></table>
 
-### [Low Latency Hybrid Architecture](src/high-performance-hybrid)
+### [Low Latency Hybrid Warehousing](src/high-performance-hybrid)
 
 <table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/high-performance-hybrid"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/high-performance-hybrid/thumbnail.png"/></a></td><td>
 
-In some cases, you'll want to expose data from Redshift to applications and websites that require many thousands of concurrent users with millisecond latency. In these cases, it can be useful to use [RDS Postgres Aurora](https://aws.amazon.com/rds/aurora/details/postgresql-details) as a 'cache' of business metrics in front of Redshift.
+In some cases, you'll want to expose data from the Data Warehouse to applications and websites that require many thousands of concurrent users with millisecond latency. In these cases, it can be useful to use [RDS Postgres Aurora](https://aws.amazon.com/rds/aurora/details/postgresql-details) as a 'cache' of business metrics in front of a given Redshift Data Warehouse.
 
 </td></tr></table>
 
-## Integrating with Other AWS Services
+## Data Warehousing Workflow Integration
 
 Amazon Redshift can integrate with a variety of other AWS services for the purposes of data ingestion, reporting & visualisation, or workflow and process management. The following architectures can enable this integration.
 
