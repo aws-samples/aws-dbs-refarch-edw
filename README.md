@@ -22,7 +22,7 @@ This repository provides you with an overview of the most common data, deploymen
 
 ### [Star Schema](src/star-schema)
 
-<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/star-schema"><img src="https://github.com/aws-samples/aws-dbs-refarch-redshift/blob/master/src/star-schema/thumbnail.png"/></a></td><td>
+<table><tr><td><a href="https://github.com/aws-samples/aws-dbs-refarch-redshift/tree/master/src/star-schema"><img src="aws-dbs-refarch-edw/src/star-schema/thumbnail.png"/></a></td><td>
 
 Star schema offers a powerful ability to perform multi-dimensional analysis of vast structured datasets. Star schemas are simple to use with a variety of industry standard data tools, and are extremely performant on Redshift.
 
