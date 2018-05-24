@@ -1,4 +1,4 @@
-Enterprise Data Warehousing is a key workload for all types of customers - from small startups through to the largest enterprises. It differs from a Data Lake solution in several key ways, but is most commonly run alongside a Data Lake to support fast end user queries on well understood data. Key characteristics of an Enterprise Data Warehousing workload include:
+__Enterprise Data Warehousing__ is a key workload for all types of customers - from small startups through to the largest enterprises. It differs from a Data Lake solution in several key ways, but is most commonly run alongside a Data Lake to support fast end user queries on well understood data. Key characteristics of an Enterprise Data Warehousing workload include:
 
 * Data sources are typically highly structured, and most commonly from application databases
 * Query response times are expected to be less than 1 second for most queries
